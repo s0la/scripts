@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=files
+Type=Application
+Exec=Documents/scripts/files/sh/windows.sh
+Icon=files

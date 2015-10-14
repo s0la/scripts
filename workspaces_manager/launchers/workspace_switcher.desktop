@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=workspace_switcher
+Type=Application
+Exec=Documents/scripts/workspaces_manager/sh/workspace_switcher.sh
+Icon=workspace_panel

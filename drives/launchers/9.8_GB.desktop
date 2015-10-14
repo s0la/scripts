@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=9.8_GB
+Type=Application
+Exec=Documents/scripts/drives/sh/9.8_GB.sh
+Icon=drive-harddisk

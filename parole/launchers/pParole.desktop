@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=parole_panel
+Type=Application
+Exec=Documents/scripts/general/sh/shift.sh 1 3 true
+Icon=parole1

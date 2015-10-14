@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=spread_all_windows
+Type=Application
+Exec=Documents/scripts/workspaces_manager/sh/spread_all.sh
+Icon=spread_all

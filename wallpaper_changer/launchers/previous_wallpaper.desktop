@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=previous_wallpaper
+Type=Application
+Exec=Documents/scripts/wallpaper_changer/sh/wallpaper_changer.sh previous
+Icon=back

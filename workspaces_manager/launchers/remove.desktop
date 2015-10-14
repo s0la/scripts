@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=remove
+Type=Application
+Exec=Documents/scripts/workspaces_manager/sh/remove.sh
+Icon=list-remove

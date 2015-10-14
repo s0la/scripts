@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=terminal
+Type=Application
+Exec=Documents/scripts/terminal/sh/terminal_launcher.sh
+Icon=utilities-terminal

@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=show desktop
+Type=Application
+Exec=Documents/scripts/general/sh/show_desktop.sh
+Icon=show_desktop

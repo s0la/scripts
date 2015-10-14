@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=files_panel
+Type=Application
+Exec=Documents/scripts/general/sh/shift.sh 1 7 true
+Icon=files

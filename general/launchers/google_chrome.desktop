@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Google Chrome
+Type=Application
+Exec=Documents/scripts/general/sh/google_chrome.sh
+Icon=firefox

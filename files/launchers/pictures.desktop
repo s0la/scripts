@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Pictures
+Type=Application
+Exec=Documents/scripts/files/sh/open.sh Pictures
+Icon=folder-pictures

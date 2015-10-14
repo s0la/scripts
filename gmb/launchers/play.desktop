@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Play
+Type=Application
+Exec=Documents/scripts/gmb/sh/play.sh
+Icon=play

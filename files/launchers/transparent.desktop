@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=transparent
+Type=Application
+Exec=Documents/scripts/files/sh/transparent.sh
+Icon=shut

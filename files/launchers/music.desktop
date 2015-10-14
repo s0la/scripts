@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Music
+Type=Application
+Exec=Documents/scripts/files/sh/open.sh Music
+Icon=folder-music

@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=terminal_panel
+Type=Application
+Exec=Documents/scripts/general/sh/shift.sh 1 6 true
+Icon=utilities-terminal

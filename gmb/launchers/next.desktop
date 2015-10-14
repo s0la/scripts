@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Next
+Type=Application
+Exec=gmusicbrowser -cmd NextSong
+Icon=next

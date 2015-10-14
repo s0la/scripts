@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=timer_down
+Type=Application
+Exec=Documents/scripts/wallpaper_changer/sh/change_timer.sh -
+Icon=down

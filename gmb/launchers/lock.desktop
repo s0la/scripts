@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Lock
+Type=Application
+Exec=Documents/scripts/gmb/sh/lock.sh
+Icon=lock

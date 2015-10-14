@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=spread_current_workspace
+Type=Application
+Exec=Documents/scripts/workspaces_manager/sh/spread.sh
+Icon=spread

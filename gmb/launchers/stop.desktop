@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Stop
+Type=Application
+Exec=Documents/scripts/gmb/sh/stop.sh
+Icon=stop

@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=workspace_manager_panel
+Type=Application
+Exec=Documents/scripts/general/sh/shift.sh 1 5 true
+Icon=tabwin

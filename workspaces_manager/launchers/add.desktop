@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=add
+Type=Application
+Exec=Documents/scripts/workspaces_manager/sh/add.sh
+Icon=list-add

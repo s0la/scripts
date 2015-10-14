@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=restore
+Type=Application
+Exec=Documents/scripts/workspaces_manager/sh/restore.sh
+Icon=document-save

@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Previous
+Type=Application
+Exec=parole -P
+Icon=back

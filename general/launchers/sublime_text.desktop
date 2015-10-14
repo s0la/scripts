@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Sublime
+Type=Application
+Exec=Documents/scripts/general/sh/activate.sh sublime
+Icon=eclipse

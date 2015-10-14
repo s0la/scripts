@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Documents
+Type=Application
+Exec=Documents/scripts/files/sh/open.sh Documents
+Icon=folder-documents

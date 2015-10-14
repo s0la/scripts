@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=gmb_panel
+Type=Application
+Exec=Documents/scripts/general/sh/shift.sh 1 4 true
+Icon=gmusicbrowser

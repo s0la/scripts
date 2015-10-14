@@ -1,0 +1,7 @@
+[Desktop Entry]
+
+Name=Gmb Bottom
+Type=Application
+Exec=Documents/scripts/general/sh/hide.sh 11
+Icon=go-bottom
+Name[en_US]=hide_gmb

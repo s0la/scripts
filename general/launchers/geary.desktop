@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Geary
+Type=Application
+Exec=Documents/scripts/general/sh/activate.sh geary
+Icon=geary

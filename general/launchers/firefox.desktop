@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Firefox
+Type=Application
+Exec=Documents/scripts/general/sh/activate.sh firefox
+Icon=firefox

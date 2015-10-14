@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Drop-Down
+Type=Application
+Exec=Documents/scripts/terminal/sh/drop_down.sh
+Icon=ddown12

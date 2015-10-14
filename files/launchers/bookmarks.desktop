@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=bookmarks
+Type=Application
+Exec=Documents/scripts/files/sh/bookmarks.sh
+Icon=user-bookmark

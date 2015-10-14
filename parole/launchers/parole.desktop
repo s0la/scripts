@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Parole
+Type=Application
+Exec=Documents/scripts/parole/sh/parole_launcher.sh
+Icon=parole1

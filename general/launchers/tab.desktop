@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=tabwin
+Type=Application
+Exec=Documents/scripts/general/sh/tab.sh
+Icon=preferences-desktop

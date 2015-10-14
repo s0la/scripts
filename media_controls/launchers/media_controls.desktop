@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Media Controls
+Type=Application
+Exec=Documents/scripts/media_controls/sh/media_controls.sh
+Icon=urserver

@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=drives_panel
+Type=Application
+Exec=Documents/scripts/general/sh/shift.sh 7 8 true
+Icon=drives

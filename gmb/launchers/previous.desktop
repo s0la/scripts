@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Previous
+Type=Application
+Exec=gmusicbrowser -cmd PrevSong
+Icon=back

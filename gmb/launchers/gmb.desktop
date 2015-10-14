@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=gmb
+Type=Application
+Exec=Documents/scripts/gmb/sh/gmb_launcher.sh
+Icon=gmusicbrowser

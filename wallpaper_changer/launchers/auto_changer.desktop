@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=auto_changer
+Type=Application
+Exec=Documents/scripts/wallpaper_changer/sh/auto_changer.sh
+Icon=auto_change

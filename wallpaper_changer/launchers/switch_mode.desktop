@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=switch_mode
+Type=Application
+Exec=Documents/scripts/wallpaper_changer/sh/switch_mode.sh
+Icon=queue

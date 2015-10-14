@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=61_GB
+Type=Application
+Exec=Documents/scripts/drives/sh/61_GB.sh
+Icon=drive-harddisk

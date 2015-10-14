@@ -1,0 +1,7 @@
+[Desktop Entry]
+
+Name=Parole Bottom
+Type=Application
+Exec=Documents/scripts/media_controls/sh/hide_parole.sh
+Icon=go-bottom
+Name[en_US]=hide_parole

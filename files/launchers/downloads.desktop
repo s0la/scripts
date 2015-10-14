@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Downloads
+Type=Application
+Exec=Documents/scripts/files/sh/open.sh Downloads
+Icon=folder-download

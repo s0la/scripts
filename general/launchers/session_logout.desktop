@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=session_logout
+Type=Application
+Exec=xfce4-session-logout
+Icon=Shutdown-grey
