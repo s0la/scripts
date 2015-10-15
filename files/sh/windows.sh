@@ -12,16 +12,16 @@ if [ ${#fls[*]} -lt 2 ]; then
 	else
 		Documents/scripts/files/sh/thunar_opacity.sh 
 	fi
-	if [ -f Documents/.hidden_files/windows_counter.txt ]; then $(rm Documents/.hidden_files/windows_counter.txt); fi
+	if [ $(sed -n '10p' Documents/.hidden_files/counts.txt) ]; then $(sed -i '10s/.*//' Documents/.hidden_files/counts.txt); fi
 
 else
 
-	if [ ! -f Documents/.hidden_files/windows_counter.txt ]; then
-		echo '1' > Documents/.hidden_files/windows_counter.txt
+	if [ -z $(sed -n '10p' Documents/.hidden_files/counts.txt) ]; then
+		sed -i '10s/.*/1/' Documents/.hidden_files/counts.txt
 		wmctrl -i -a ${fls[0]}
 	else
-		num=$(cat Documents/.hidden_files/windows_counter.txt)
-		echo "$((num + 1))" > Documents/.hidden_files/windows_counter.txt
+		num=$(sed -n '10p' Documents/.hidden_files/counts.txt)
+		sed -i "10s/.*/$((num + 1))/" Documents/.hidden_files/counts.txt
 		wmctrl -i -a ${fls[$((num % ${#fls[*]}))]}
 	fi
 fi

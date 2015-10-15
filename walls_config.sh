@@ -8,8 +8,17 @@ for w in $(seq 0 $((desk_num - 1))); do
 done
 
 xfconf-query -c xfce4-desktop -p /backdrop/single-workspace-mode -n -t bool -s true
-echo 0 > Documents/.hidden_files/wall_auto_changer.txt
-echo 5 > Documents/.hidden_files/wall_change_timer.txt
-echo 0 > Documents/.hidden_files/wallpaper_change_counter.txt
-echo 1 > Documents/.hidden_files/single_workspace_switcher.txt
+
+echo \
+'#single_workspace_switcher
+true
+#wallpaper_change_counter
+0
+#wall_change_timer
+5
+#wall_auto_change
+false
+#files_counter
+' > Desktop/counts.txt
+
 Documents/scripts/wallpaper_changer/sh/switch_mode.sh

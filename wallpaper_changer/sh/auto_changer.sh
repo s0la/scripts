@@ -1,27 +1,21 @@
-counter=$(cat Documents/.hidden_files/wall_auto_changer.txt)
-echo $((counter + 1)) > Documents/.hidden_files/wall_auto_changer.txt
+#!/bin/bash
 
-if [ $((counter % 2)) -eq 0 ]; then
+state=$(sed -n '8p' Documents/.hidden_files/counts.txt)
+[ "$state" == 'true' ] && state_to_be_set='false' || state_to_be_set='true'
 
-	state=true
-	switch='ON'
-else
+sed -i "8s/.*/$state_to_be_set/" Documents/.hidden_files/counts.txt
 
-	state=false
-	switch='OFF'
-fi
+notify-send "wallpaper auto changer is $state"
+switch=$(sed -n '2p' Documents/.hidden_files/counts.txt)
 
-notify-send "wallpaper auto changer is $switch"
-counter=$(cat Documents/.hidden_files/single_workspace_switcher.txt)
-
-if [ $((counter % 2)) == 0 ]; then
+if [ "$switch" == 'true' ]; then
 
 	workspace_num=$(wmctrl -d | wc -l)
 	for w in $(seq 0 $((workspace_num - 1))); do
-		xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDVI-1/workspace$w/backdrop-cycle-enable -s $state
+		xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDVI-1/workspace$w/backdrop-cycle-enable -s "$state"
 	done
 else
 
 	desk_num=$(wmctrl -d | grep '*' | cut -c 1)
-	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDVI-1/workspace$desk_num/backdrop-cycle-enable -s $state
+	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDVI-1/workspace$desk_num/backdrop-cycle-enable -s "$state"
 fi
