@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=keep up
+Type=Application
+Exec=Documents/scripts/general/sh/main_panel_mode.sh 50 0
+Icon=go-top

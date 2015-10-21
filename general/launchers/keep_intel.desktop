@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=keep intel
+Type=Application
+Exec=Documents/scripts/general/sh/main_panel_mode.sh 0 1
+Icon=go-bottom
