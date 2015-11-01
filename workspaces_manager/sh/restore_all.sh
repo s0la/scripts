@@ -1,4 +1,5 @@
 killall spread_all.sh
+pkill -9 -f view_all.py
 sleep 0.3
 windows_list=$(cat Documents/.hidden_files/positions.txt)
 windows=$(wmctrl -l | grep -v 'xfce4-panel' |  grep '0x' | grep -Eo '0x[a-z0-9]+' | sed 1d)

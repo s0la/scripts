@@ -8,21 +8,7 @@ declare -a show_windows
 p_index=0
 c_index=0
 
-while read line;do
-
-	num=${line:12:1}
-	if [ $num == $current_num ]; then
-			
-			windows[${#windows[*]}]=${line:0:10}
-			if [ $current_num -eq num ]; then
-
-				show_windows[${#show_windows[*]}]=true
-			else
-				show_windows[${#show_windows[*]}]=false
-			fi
-	fi
-	
-done <<< "$(wmctrl -l | grep -v 'xfce4-panel' | sed 1d)"
+windows="$(wmctrl -l | grep -v 'xfce4-panel' | sed 1d | grep "^.\{12\}$current_num")"
 
 function ratio {
 

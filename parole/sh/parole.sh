@@ -11,5 +11,5 @@ else
 	while [ -z $parole_id ]; do
 		parole_id=$(wmctrl -l | grep -i 'parole Media Player' | grep -Eo '0x[a-z0-9]+')
 	done
-	transset -i $parole_id .92
+	transset -i $parole_id .87
 fi

@@ -11,5 +11,5 @@ else
 	while [ -z $gmb_id ]; do
 		gmb_id=$(wmctrl -l | grep -i gmusicbrowser |  grep -Eo '0x[a-z0-9]+')
 	done
-	transset -i $gmb_id .87
+	transset -i $gmb_id .84
 fi
