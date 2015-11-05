@@ -1,5 +1,5 @@
 current_num=$1
-current_desk=$2
+current_desk=$(wmctrl -d | grep '*' | cut -c 1)
 p_index=0
 c_index=0
 

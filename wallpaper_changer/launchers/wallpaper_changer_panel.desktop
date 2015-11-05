@@ -3,4 +3,4 @@
 Name=wallpaper_changer_panel
 Type=Application
 Exec=Documents/scripts/general/sh/shift.sh 1 9
-Icon=wc
+Icon=wall_ch-grey-lighter

@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=spread_all_python
+Type=Application
+Exec=python Documents/scripts/workspaces_manager/sh/view_all.py
+Icon=tabwin

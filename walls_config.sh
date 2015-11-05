@@ -19,6 +19,6 @@ true
 #wall_auto_change
 false
 #files_counter
-' > Desktop/counts.txt
+' > Documents/.hidden_files/counts.txt
 
 Documents/scripts/wallpaper_changer/sh/switch_mode.sh

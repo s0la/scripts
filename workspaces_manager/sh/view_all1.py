@@ -23,3 +23,4 @@ while True:
 
 		update_windows()
 		org_windows_num = current_windows_num[:]
+	print current_windows_num, org_windows_num

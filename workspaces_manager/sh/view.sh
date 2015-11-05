@@ -32,8 +32,13 @@ while true; do
 	calc pos
 	diff=$(diff <(printf "%s\n" "${org_pos[@]}") <(printf "%s\n" "${pos[@]}"))
 	if [ "$diff" ]; then
+
+		current_desk=$(wmctrl -d | grep '*' | cut -c 1)
 	
-		Documents/scripts/workspaces_manager/sh/view_all.sh $(wmctrl -d | grep '*' | cut -c 1)
+		for d in $(seq 0 $((desks - 1))); do
+
+			Documents/scripts/workspaces_manager/sh/gen_view_new.sh $(((($current_desk + d)) % desks))
+		done
 		org_pos=("${pos[@]}")
 	fi
 	set_arr pos

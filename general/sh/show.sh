@@ -2,7 +2,7 @@
 mode=0
 length=100
 
-if [ $1 -eq 1 ]; then mode=1; length=1
+if [ $1 -eq 1 ] || [ $1 -eq 8 ]; then mode=1; length=1
 elif [ $1 -eq 2 ]; then bottom=102
 else bottom=50
 fi

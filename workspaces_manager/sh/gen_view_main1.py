@@ -54,7 +54,7 @@ def set_positions(w_num, w):
 def main(n):
 	current_num = n
 	current_desk = int(os.popen('wmctrl -d | grep "*" | cut -c 1').read())
-	windows = [Window(id) for id in [id[:10] for id in os.popen('wmctrl -l | grep -v "xfce4-panel" | sed 1d | grep "^.\{12\}%s"' % current_num)]]
+	windows = [Window(w) for w in [id[:10] for id in os.popen('wmctrl -l | grep -v "xfce4-panel" | sed 1d | grep "^.\{12\}%s"' % current_num)]]
 	height, coords, params = set_positions(len(windows), windows)
 	index = 0
 
