@@ -1,0 +1,1 @@
+sudo apt-get purge $(dpkg -l |  grep -P -o "linux-image-\d\S+" | grep -v $(uname -r))
