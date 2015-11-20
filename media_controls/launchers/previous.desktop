@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=previous
+Type=Application
+Exec=Documents/scripts/media_controls/sh/controlls.sh previous
+Icon=back

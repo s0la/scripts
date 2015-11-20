@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=next
+Type=Application
+Exec=Documents/scripts/media_controls/sh/controlls.sh next
+Icon=next

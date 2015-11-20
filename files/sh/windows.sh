@@ -5,8 +5,6 @@ fls=(${files[0]})
 
 if [ ${#fls[*]} -lt 2 ]; then
 
-	Documents/scripts/general/sh/shift.sh 7 1
-
 	if [ $files ]; then
 		wmctrl -i -a $files
 	else

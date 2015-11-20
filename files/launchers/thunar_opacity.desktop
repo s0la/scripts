@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Thunar-opacity
+Type=Application
+Exec=Documents/scripts/files/sh/thunar_opacity.sh
+Icon=files

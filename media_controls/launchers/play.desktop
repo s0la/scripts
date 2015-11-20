@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=play
+Type=Application
+Exec=Documents/scripts/media_controls/sh/controlls.sh play
+Icon=play

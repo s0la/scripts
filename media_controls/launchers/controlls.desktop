@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=controlls
+Type=Application
+Exec=Documents/scripts/general/sh/shift.sh 1 11
+Icon=media_controlls

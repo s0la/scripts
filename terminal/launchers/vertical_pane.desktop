@@ -1,0 +1,7 @@
+[Desktop Entry]
+
+Name=vertical pane
+Type=Application
+Exec=Documents/scripts/terminal/sh/vertical_pane.sh
+icon=utility-terminal
+Icon=vertical-pane

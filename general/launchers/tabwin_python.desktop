@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=tabwin_py
+Type=Application
+Exec=python Documents/scripts/general/sh/tabwin_fully_python.py
+Icon=preferences-desktop

@@ -3,8 +3,7 @@
 if [ ${1::2} == '0x' ]; then
 	id=$1
 else
-	pid=$(wmctrl -l -p | grep -i $(pgrep $1))
-	id=${pid:0:10}
+	id=$(wmctrl -l -p | grep -i $(pgrep $1) |  grep -Eo '0x[a-z0-9]+')
 fi
 
 if [ $id ]; then

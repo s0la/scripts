@@ -1,7 +1,6 @@
 #!/bin/bash
 
-pid=$(wmctrl -l -p | grep $(pidof parole))
-parole_id=${pid:0:10}
+parole_id=$(wmctrl -l -p | grep $(pidof parole) |  grep -Eo '0x[a-z0-9]+')
 if [ $parole_id ]; then
 	
 	Documents/scripts/general/sh/activate.sh $parole_id
