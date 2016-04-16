@@ -1,12 +1,15 @@
+#!/bin/bash
+
 current_num=$1
 current_desk=$(wmctrl -d | grep '*' | cut -c 1)
+show_all_windows=$([ $current_desk == $current_num ] && echo true || echo "")
 p_index=0
 c_index=0
 
 while read line;do
 	if [ "${line:12:1}" == "$current_num" ]; then windows[${#windows[*]}]=${line:0:10}; fi
 	
-done <<< "$(wmctrl -l | grep -v 'xfce4-panel' | sed 1d | grep "^.\{12\}$current_num")"
+done <<< "$(wmctrl -l | grep -v 'xfce4-panel' | grep -v 'plank' | sed 1d | grep "^.\{12\}$current_num")"
 
 function ratio {
 	h=$height
@@ -65,23 +68,30 @@ function set_params {
 
 function write_pos {
 	if [ $rdr == true ] && [ $1 == ${windows[${#windows[*]} - 1]} ]; then
-		echo $2 >> Documents/.hidden_files/pos.txt
+		echo $2 >> ~/Documents/.hidden_files/pos.txt
 	else
-		echo $2 >> Documents/.hidden_files/positions.txt
+		echo $2 >> ~/Documents/.hidden_files/positions.txt
+	fi
+}
+
+function is_window_hidden {
+	if [ -n "$(xwininfo -all -id $1 | grep -v 'xfce4-panel' | grep 'Hidden')" ]; then
+		eval $2
 	fi
 }
 
 function calc_coords {
+	is_window_hidden $1 "echo 'xdotool windowminimize $1' >> ~/Documents/.hidden_files/positions.txt"
 	wd=$(xwininfo -id $1 | grep Width | grep -Eo '[0-9]+')
 	if [ $wd -gt 1900 ]; then
 		wmctrl -i -r $1 -b toggle,maximized_vert,maximized_horz
 		write_coords $1
-		echo "wmctrl -i -r $1 -b toggle,maximized_vert,maximized_horz" >> Documents/.hidden_files/positions.txt
+		echo "wmctrl -i -r $1 -b toggle,maximized_vert,maximized_horz" >> ~/Documents/.hidden_files/positions.txt
 	else	
 		write_coords $1
 	fi
 	if [ $2 ]; then	
-		dims=$(cat Documents/.hidden_files/positions.txt | grep $1 | head -1)
+		dims=$(cat ~/Documents/.hidden_files/positions.txt | grep $1 | head -1)
 		width=$(echo $dims | grep  -oP "^([^,]*\,){3}\K[^,]*")
 		height=$(echo $dims | grep  -oP "^([^,]*\,){4}\K[^,]*")
 	fi
@@ -92,7 +102,7 @@ function write_coords {
 	y=$(xwininfo -id $1 | grep "Absolute upper-left Y:" | grep -Eo '[0-9]+')
 	wid=$(xwininfo -id $1 | grep Width | grep -Eo '[0-9]+')
 	hei=$(xwininfo -id $1 | grep Height | grep -Eo '[0-9]+')
-	echo "wmctrl -i -r $1 -e 0,$((x - 1)),$((y - 23)),$wid,$hei" >> Documents/.hidden_files/positions.txt
+	echo "wmctrl -i -r $1 -e 0,$((x - 1)),$((y - 23)),$wid,$hei" >> ~/Documents/.hidden_files/positions.txt
 }
 
 index=0
@@ -105,11 +115,11 @@ for i in ${windows[*]}; do
 	ratio $hei $wid		
 	set_coords ${params[$p_index]} ${params[$((p_index + 1))]}
 
-	if [ $current_desk -eq $current_num ]; then end=" && wmctrl -i -a $i"; else end=''; fi
 	store[${#store[*]}]="wmctrl -i -r $i -e 0,$((x + ${coords[$c_index]})),$((y + ${coords[$((c_index + 1))]})),${w%%.*},${h%%.*}"+"$end"	
 	((p_index++)); ((p_index++)); ((c_index++)); ((c_index++)); ((index++))
 done
 
-for s in "${store[@]}"; do
-	 eval $s
+for index in $(seq 0 ${#windows[@]}); do
+	eval "${store[index]}"
+	if [ $show_all_windows ]; then is_window_hidden ${windows[index]} "xdotool windowactivate ${windows[index]}"; fi
 done

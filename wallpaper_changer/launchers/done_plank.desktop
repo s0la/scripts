@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=done
+Type=Application
+Exec=Documents/scripts/general/sh/shift_plank.sh main
+Icon=task

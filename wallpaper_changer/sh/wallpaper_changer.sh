@@ -3,7 +3,7 @@
 declare -a walls
 while read line;do
 	walls[${#walls[*]}]=$line
-done <<< "$(ls Pictures/walls)"
+done <<< "$(ls ~/Pictures/walls)"
 
 wall_num=$(sed -n '4p' Documents/.hidden_files/counts.txt)
 

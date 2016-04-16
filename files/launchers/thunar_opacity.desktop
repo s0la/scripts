@@ -4,3 +4,30 @@ Name=Thunar-opacity
 Type=Application
 Exec=Documents/scripts/files/sh/thunar_opacity.sh
 Icon=files
+Actions=documents;downloads;music;pictures;videos;
+
+
+[Desktop Action documents]
+
+Name=Documents
+Exec=Documents/scripts/files/sh/thunar_opacity.sh Documents
+
+[Desktop Action downloads]
+
+Name=Downloads
+Exec=Documents/scripts/files/sh/thunar_opacity.sh Downloads
+
+[Desktop Action pictures]
+
+Name=Pictures
+Exec=Documents/scripts/files/sh/thunar_opacity.sh Pictures
+
+[Desktop Action music]
+
+Name=Music
+Exec=Documents/scripts/files/sh/thunar_opacity.sh Music
+
+[Desktop Action videos]
+
+Name=Videos
+Exec=Documents/scripts/files/sh/thunar_opacity.sh Videos

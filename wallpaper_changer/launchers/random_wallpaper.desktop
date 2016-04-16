@@ -4,3 +4,4 @@ Name=random_wallpaper
 Type=Application
 Exec=Documents/scripts/wallpaper_changer/sh/wallpaper_changer.sh random
 Icon=system-reboot
+

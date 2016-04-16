@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=Midori
+Type=Application
+Exec=Documents/scripts/general/sh/activate.sh midori
+Icon=midori

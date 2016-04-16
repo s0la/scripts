@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=wallpaper_changer_panel
+Type=Application
+Exec=Documents/scripts/general/sh/shift_plank.sh wallsControl
+Icon=wall_ch-grey-lighter
