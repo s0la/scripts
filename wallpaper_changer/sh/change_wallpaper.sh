@@ -8,7 +8,9 @@ function determine_input {
 		'default') dir='~/Pictures/walls';;
 		'next') change='next';;
 		'previous') change='previous';;
-		*) ;;
+		*) if [ ${#1} -gt 0 ];then
+				dir=$1
+			fi;;
 	esac
 }
 
