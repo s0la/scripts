@@ -1,0 +1,6 @@
+[Desktop Entry]
+
+Name=toggle_side_pane
+Type=Application
+Exec=~/Documents/scripts/files/launchers/toggle_side_pane.sh
+Icon=side_pane.png
